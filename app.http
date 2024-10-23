@@ -1,0 +1,47 @@
+### Add a new category
+POST http://localhost:3000/categories
+Content-Type: application/json
+
+{
+    "name": "Food",
+    "type": "expense"
+}
+
+### Get all categories
+GET http://localhost:3000/categories
+
+### Add a new transaction
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+    "type": "income",
+    "category": "salary",
+    "amount": 1000,
+    "date": "2024-10-22",
+    "description": "Monthly Salary"
+}
+
+### Retrieve all transactions
+GET http://localhost:3000/transactions
+
+### Get a transaction by ID
+GET http://localhost:3000/transactions/1
+
+### Update a transaction by ID
+PUT http://localhost:3000/transactions/1
+Content-Type: application/json
+
+{
+    "type": "expense",
+    "category": 1,
+    "amount": 75,
+    "date": "2024-10-22",
+    "description": "Updated grocery shopping"
+}
+
+### Delete a transaction by ID
+DELETE http://localhost:3000/transactions/1
+
+### Get a summary of transactions
+GET http://localhost:3000/summary
